@@ -83,16 +83,16 @@ button {
 
 /*---------header-------------*/
 
-header {
+
+/* header {
     background-color: var(--headingColor);
     height: 10vh;
     line-height: 10vh;
-    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
-}
+} */
 
 header a {
     margin-left: 40px;
@@ -111,7 +111,7 @@ header a {
     header a {
         width: 100%;
         display: block;
-        color: var(--white);
+        /* color: var(--white); */
     }
     .toggle {
         display: block;

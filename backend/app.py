@@ -1,4 +1,12 @@
+# Set matplotlib backend first
+import matplotlib
+matplotlib.use('Agg')  # Non-interactive backend
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+import matplotlib.pyplot as plt
+
 from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Model
@@ -8,15 +16,13 @@ from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input as
 from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2, preprocess_input as preprocess_mnetv2
 from tensorflow.keras.utils import array_to_img
 import matplotlib as mpl
-import matplotlib.pyplot as plt
 import os
 import uuid
 import base64
 from io import BytesIO
-from PIL import Image
 
-app = Flask(__name__, static_folder='../frontend/build')
-
+app = Flask(__name__)
+CORS(app)
 # Configure upload folder
 UPLOAD_FOLDER = 'uploads'
 if not os.path.exists(UPLOAD_FOLDER):
