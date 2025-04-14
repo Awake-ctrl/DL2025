@@ -1,0 +1,29 @@
+.visualizer-container {
+    text-align: center;
+    font-family: sans-serif;
+    padding: 2rem;
+}
+
+.canvas-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.canvas {
+    border: 2px solid #ccc;
+    cursor: crosshair;
+}
+
+.output-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.highlight {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.3);
+    pointer-events: none;
+    border: 1px solid red;
+}
