@@ -20,7 +20,10 @@ const Navbar = () => {
             <li className="nav-item">
               <a href="/FeatureMaps" className="nav-link">Feature Maps</a>
             </li>
-            <li className="nav-item dropdown">
+             <li className="nav-item">
+              <a href="/Comp" className="nav-link">Compare Models</a>
+            </li>
+            {/* <li className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle">Dropdown link</a>
               <div className="dropdown-menu">
                 <a href="#" className="dropdown-item">Action</a>
@@ -28,7 +31,7 @@ const Navbar = () => {
                 <div className="dropdown-divider"></div>
                 <a href="#" className="dropdown-item">Something else here</a>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

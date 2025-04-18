@@ -330,11 +330,13 @@ const KernelExplorer = () => {
         <div className="position-info">
           {!hoverPosition.isOutput ? (
             <>
-              <p>Input Position: ({hoverPosition.x}, {hoverPosition.y})</p>
-              <p>Affecting Output Area: ({hoverPosition.x-1}-{hoverPosition.x+1}, {hoverPosition.y-1}-{hoverPosition.y+1})</p>
+              <p>Input position: ({hoverPosition.x-1}-{hoverPosition.x+1}, {hoverPosition.y-1}-{hoverPosition.y+1})</p>
+              
+              {/* <p>Input Position: ({hoverPosition.x}, {hoverPosition.y})</p> */}
+              <p>Affecting Output Area:  ({hoverPosition.x}, {hoverPosition.y})</p>
             </>
           ) : (
-            <p>Output Position: ({hoverPosition.x}, {hoverPosition.y})</p>
+            <p>Output Position:({hoverPosition.x}, {hoverPosition.y})</p>
           )}
         </div>
       )}
